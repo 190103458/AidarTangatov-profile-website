@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="styless.css" />
+	<script src="//cdn.jsdelivr.net/npm/less" ></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="contact us">
+	<div id="cent">
+		<div style="display: flex; justify-content: center;">
+			<img src="font.png" id ="img">
+		</div>
+		<h1 style="color: white; text-align: center;">Contact</h1>
+		<hr style="color: #DDD1D1; border-width: 2px">
+		<div id="inline" class="margin_1">
+			<div>
+				<p><strong>First name</strong><span style="color: red">*</span></p>
+				<input type="text" name="firstname" class="name" placeholder="First name">
+			</div>
+			<div>
+				<p><strong>Last name</strong><span style="color: red">*</span></p>
+				<input type="text" name="lastname" class="name" placeholder="Last name">
+			</div>
+		</div>
+		<hr style="color: #DDD1D1; border-width: 2px">
+		<div  class="margin_2" style=" display: flex;justify-content: center; width: 100%">
+			<div class="textin" style=" width: 75%">
+				<div style="display: flex;justify-content: center; width: 100%">
+					
+				<p><strong>Email</strong><span style="color: red">*</span></p>
+				</div>
+				<div style="display: flex;justify-content: center; width: 100%">
+				<input style=" width: 100%" type="text" name="Email" class="input" placeholder="Email">
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="margin3" style=" display: flex;justify-content: center;margin-top: 50px; width: 100%" >
+			<div>
+			<div class="text1">
+				<input type="text" name="Email" class="input" placeholder="Message" style="border-radius: 5px 5px 0 0;">
+			</div>
+			<div class="text1">
+				<textarea style="border-radius:0 0 5px 5px ; border-top-width: 0px; margin-top: 0;" placeholder="Addition"></textarea>
+			</div>
+		</div>
+
+		</div>
+		
+
+		<div style=" display: flex;justify-content: center;">
+			<a href="project.html">
+				<button>Send message</button>
+			</a>
+		</div>
+	</div>
+
+	<a href="index.html">
+		<img onclick="close_popup()" class="x1" src="data:image/png;base64,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">
+	</a>
+	
+</body>
+</html>
