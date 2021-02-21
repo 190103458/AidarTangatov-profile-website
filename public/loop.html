@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div style="width: 100%;height: 300px;display: inline-block;vertical-align: baseline;color: #dadce0;font-size: 150px;font-family: Roboto Mono; text-align: center;">
+		<p>\(^Д^)/</p>
+	</div>
+
+
+	<script type="text/javascript">
+		var fonts = ["Times_New_Roman","Lemonada","Satisfy","Pacifico", "Lobster", "Caveat", "Cookie", "Indie_Flower", "Sansita_Swashed"]
+		for(var i = 0; i < 9; i++) {
+		   document.body.innerHTML += '<div class="myCard" id="'+ fonts[i] + '"><div><p>'+ fonts[i].replaceAll("_", " ") + '<h3></div><p class="extext" id="values" style="font-family: '+ fonts[i].replace("_", " ") + '">Be who you are and say what you feel, because those who mind' +  "don't" + 'matter, and those who matter' + "don't" + 'mind.</p></div>'
+		}		
+	</script>
+</body>
+</html>

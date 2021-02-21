@@ -1,0 +1,451 @@
+
+
+#img{
+	width: 90px;
+	height: 42px;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#top{
+	margin-bottom: 0px;
+  	animation: change-background 10s ease infinite;
+}
+.nav{
+	display: flex;
+	justify-content: center;
+	background-color: #333;
+	font-size: 20px;
+	color: white;
+}
+.navbut div{
+	padding:20px 0;
+	cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.nav div:hover:not(.active) {
+	background-color: #111;
+}
+#letters{
+	margin-top: 20px;
+	display: flex;
+	justify-content: left;
+	flex-wrap: wrap;
+	vertical-align: text-bottom;
+}
+.kard{
+	height: 150px;
+	display: inline;
+	vertical-align: baseline;
+}
+.kard div{
+	height: 100%;
+	display: inline;
+	vertical-align: baseline;
+}
+.fnt{
+	margin: 0px;
+	padding: 0;
+	font-size: 100px;
+	display: inline-block;
+	vertical-align: text-bottom;
+}
+
+#h1{
+	font-family: a_BosaNova;
+	font-size: 50px; 
+	position: relative;
+	display: none;
+}
+#txt{
+	font-family: Calibri ;
+	font-size: 27px; 
+	position: relative;
+	opacity: 0;
+	word-wrap: break-word;
+}
+#ig{
+	float: left;
+	margin-right: 50px;
+	display: none;
+	width: 10%;
+}
+@keyframes change-background {
+  0% {
+  	background: #cc9900;
+  }
+  25%{
+  	background: #69b7eb;
+  }
+  50% {
+    background: #79ff4d;
+  }
+  75% {
+    background: #7733ff;
+  }
+  100%{
+  	background: #cc9900;
+  }
+}
+.btn2{
+	height: 30px;
+	text-align: center;
+	vertical-align: top;
+}
+#htxt{
+	padding: 50px;
+}
+.popup{
+    position: absolute;
+    top: 0;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.content{
+    background-color: white;
+    height: 400px;
+    width: 500px;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+#username{
+    display: block;
+    position: relative;
+    width: 50%;
+    padding: 8px;
+	margin: 30px auto;
+}
+#pass{
+    display: block;
+    position: relative;
+    width: 50%;
+    padding: 8px;
+	margin: 30px auto;
+}
+.x{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.profile{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    min-width: 140px;
+    height: 30px;
+    margin: 0;
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+#img3{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline;
+}
+
+#name{
+    margin: 0;
+    padding: 10px;
+    display: inline;
+    font-size: 25px;
+    font-family: a_BosaNova;
+}
+#lgn{
+	width: 100px;
+	border:solid 2px white;
+	background-color: transparent;
+	color: white;
+	position: absolute;
+    top: 25px;
+    right: 30px;
+    margin: 0;
+    height:35px;
+    border-radius: 17px;
+    z-index: 1;
+}
+#lgn:hover{
+	width: 110px;
+	height: 40px;
+	top:22.5px;
+	right: 25px;
+	border-radius: 20px;
+	font-size: 19px;
+}
+li{
+	margin: 0px
+	border-bottom: 1px solid black;
+	font-size: 15px;
+	cursor: pointer;
+	padding: 10px;
+}
+.p1{
+	margin: 0px
+}
+
+#tools{
+	margin: 50px;
+	padding: 10px;
+	width: 90%;
+	border: solid 2px #9B9B9B;
+	border-radius: 40px;
+	align-items: center;
+}
+
+.tool-input{
+	width:100%;
+	height: 100%;
+}
+
+.tool-input input{
+	height: 1.4vw;
+	vertical-align: baseline;
+	padding: 0;
+	border-width: 0px; 
+	border-right-width: 2px; 
+	width:100%;
+	min-height: 100%;
+	max-height: 100%;
+}
+
+
+.slidecontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  align-items: center;
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  max-width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: #58BBE0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  color: #58BBE0;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	min-height: 10px;
+	min-width: 10px;
+	width: 10%;
+	height: 1vw;
+  border-radius: 50%;
+  background: #58BBE0;
+  color: #58BBE0;
+  cursor: pointer;
+}
+
+@media(max-width: 2000px){
+	#label{
+		display: none;
+	}
+	#unnav{
+		display: flex;
+		
+	}
+	.navbut{
+			width: 25%;
+	}
+	#cont{
+		width: 70%;
+	}
+	#val{
+		font-size: 1.4vw;
+	}
+	#poisk{
+		width: 2vw;
+	}
+	#
+}
+@media(max-width: 600px){
+	#label{
+		display: inline-block;
+		cursor: pointer;
+	}
+	#unnav{
+		display: none;
+	}
+	.navbut{
+			width: 100%;
+		}
+	#cont{
+		width: 50%;
+	}
+	#val{
+		font-size: 2.2vw;
+	}
+	#poisk{
+		width: 3vw;
+	}
+}
+
+@media(max-width: 2500px){
+	.myCard{
+		border: solid 1px #A49F9F;
+		border-radius: 15px;
+		padding: 10px 30px;
+		width: 30%;
+		min-height: 200px;
+		margin: 20px;
+	}
+}
+@media(max-width: 1240px){
+	.myCard{
+		border: solid 1px #A49F9F;
+		border-radius: 15px;
+		padding: 10px 30px;
+		width: 45%;
+		min-height: 200px;
+		margin: 20px;
+	}
+}
+@media(max-width: 840px){
+	.myCard{
+		border: solid 1px #A49F9F;
+		border-radius: 15px;
+		padding: 10px 30px;
+		width: 100%;
+		min-height: 200px;
+		margin: 20px;
+	}
+}
+#ftext{
+	margin: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.myCard div{
+	font-size: 15px;
+	color: #5A5858;
+	border-bottom: solid 1px #B8B5B5;
+}
+.extext{
+	color: #444444;
+	margin-top: 40px;
+	font-size: 20px;
+	word-wrap: break-word;
+}
+
+#map {
+        width: 100%;
+        height: 300px;
+}
+
+
+.but{
+	margin:25px;
+	color: black;
+	border-bottom:solid 1px #ADACAC;
+}
+
+	.but:visited {
+	  color: black;
+	}
+
+	/* mouse over link */
+	.but:hover {
+	  margin-left: 30px;
+	  cursor: pointer;
+	}
+
+#mp{
+	display: none;
+	padding: 50px; 
+	margin-top: 100px
+}
+
+.ic{
+
+	display: inline-block;
+width: 50px;
+height: 50px;
+border-radius: 25px;
+border: none !important;
+margin: 10px;
+position: relative;
+transform: scale(1);
+transition: all 0.33s !important;
+vertical-align: top;
+}
+.tele{
+	background: #2ea5e1;
+}
+.face{
+	background: #3b5997;
+}
+.ins{
+	background: url(ig-bg.png) center center no-repeat;
+    background-size: auto;
+background-size: 100%;
+}
+.vk{
+	background: #4d7198;
+}
+.ic i{
+	position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+background: url(icons_v7.png) 0 0 no-repeat;
+    background-size: auto;
+background-size: 1500% 100%;
+transition: all 0.2s;
+}
+.face i{
+	background-position: 7% 0;
+}
+.ins i{
+background-position: 85.6% 0;
+
+}
+.vk i{
+	background-position: 14% 0;
+}
+.ic:visited {
+	  width: 56px;
+	height: 56px;
+	margin: 2px 7px 7px 12px;
+	}
+
+.ic:hover{
+	width: 56px;
+	height: 56px;
+	margin: 2px 7px 7px 12px;
+}
