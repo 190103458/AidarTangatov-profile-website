@@ -15,7 +15,7 @@ use App\Models\post;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//ferfe
 
 Route::get('/', function () {
     return view('main');
