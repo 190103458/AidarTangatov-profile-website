@@ -15,6 +15,7 @@ use App\Models\post;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//ending
 
 Route::get('/', function () {
     return view('main');
