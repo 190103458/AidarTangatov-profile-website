@@ -1,12 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\DB;
 
 use App\Models\post;
-=======
->>>>>>> 45fa2f9c650f3421e1059df9a055a2afac5822c2
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +21,11 @@ Route::get('/', function () {
     return view('main');
 });
 
-<<<<<<< HEAD
 Route::get('/post', function () {
     $str = post::find(1);
     return $str;
 });
 
-=======
->>>>>>> 45fa2f9c650f3421e1059df9a055a2afac5822c2
 Route::get('/work1', function () {
     return view('work1 ');
 })->name('work1');
@@ -39,14 +34,20 @@ Route::get('/work2', function () {
     return view('work2 ');
 })->name('work2');
 
-<<<<<<< HEAD
 
 Route::get('/post/create', function () {
     DB::table("post")->insert([
-        'title' => 'title',
-        'body' => 'body'
+        'title' => 'inf232',
+        'body' => 'web'
+
     ]);
 });
 
-=======
->>>>>>> 45fa2f9c650f3421e1059df9a055a2afac5822c2
+Route::get('/blog', [BlogController::class, 'index']);
+
+
+Route::get('/blog/create', function () {
+    return view('blog.create');
+});
+
+Route::post('/blog/create', [BlogController:: class, 'store'])->name('add-post');
