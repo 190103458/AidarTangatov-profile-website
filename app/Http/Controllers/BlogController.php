@@ -10,9 +10,9 @@ class BlogController extends Controller
     //
 
     public function index(){
-        $posts = post::all();
+        $blog = post::all();
 
-        return view("blog.index")->with(["posts" => $posts]);
+        return view("blog.index")->with(["blog" => $blog]);
 
     }
 
@@ -31,7 +31,7 @@ class BlogController extends Controller
 
         if($post == null) return response(['message' => 'post not found'], 404);
 
-        return view('blog.detail') -> with(['posts'=>$post]);
+        return view('blog.detail') -> with(['blog'=>$post]);
 
     }
 }

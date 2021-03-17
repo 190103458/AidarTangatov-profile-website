@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style1.css">
 </head>
 <body >
-    {{ $posts }}
+    {{ $blog}}
 
 </body>
 </html>
