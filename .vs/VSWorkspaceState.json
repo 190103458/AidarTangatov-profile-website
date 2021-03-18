@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\Models",
-    "\\database",
-    "\\database\\migrations",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
     "\\resources",
     "\\resources\\views",
     "\\resources\\views\\blog",
@@ -12,6 +11,6 @@
     "\\tests",
     "\\tests\\Feature"
   ],
-  "SelectedNode": "\\app\\Models\\post.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\BlogController.php",
   "PreviewInSolutionExplorer": false
 }
