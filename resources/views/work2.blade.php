@@ -42,7 +42,7 @@
 		}
 		
 		.les-img{
-			background-image: url("les.jpg");
+			background-image: url("{{ asset('les.jpg') }}");
 			background-color: #cccccc;
 			height: 500px;
 			background-position: center;
@@ -83,36 +83,36 @@
 </head>
 <body background-color = "#1E1E1E">
 <div class="flex">
-	<a href="">MAIN</a>
-	<a href="">CONTACT</a>
-	<a href="">ABOUT US</a>
+	<a href="">{{ __('MAIN') }}</a>
+	<a href="">{{ __('CONTACT') }}</a>
+	<a href="">{{ __('ABOUT US') }}</a>
 </div>
 <div class="les-img">
 	<div class="les-text">
-    <h1 style="font-size:55px; font-family: Calibri Light; letter-spacing: 20px">Protect our land</h1>
-    <p style="margin-top: 80px; font-family: Vladimir Script ; font-size: 30px">"Environment is no one's property to destroy;<br>it's everyone's responsibility to protect"</p>
+    <h1 style="font-size:55px; font-family: Calibri Light; letter-spacing: 20px">{{ __('Protect our land') }}</h1>
+    <p style="margin-top: 80px; font-family: Vladimir Script ; font-size: 30px">{{ __('"Environment is no ones property to destroy. Its everyones responsibility to protect"') }}</p>
     <form action="https://www.greenpeace.org" target="_blank">
        <button class="button">join</button>
   </form>
   </div>
 </div>
 <div>
-	<h1 class="h">Solution</h1>
+	<h1 class="h">{{ __('Solution') }}</h1>
 </div>
 <div class="flex2">
 	<div class="img-text" >
-		<img src="flowers1.jpg">
-		<p>Show caring attitude towards the forest</p>
+		<img src="{{ asset('flowers1.jpg') }}">
+		<p>{{ __('Show caring attitude towards the forest') }}</p>
 	</div>
 	<div class="img-text">
-		<img src="bottle.jpg">
-		<p>Refuse from plastic bags and bottles</p>
+		<img src="{{ asset('bottle.jpg') }}">
+		<p>{{ __('Refuse from plastic bags and bottles') }}</p>
 	</div>
 </div>
 <div class="flex2">
 	<div class="img-text" style="margin-top:80px ">
-		<img src="index3.jpg">
-		<p>Buy eco-friendly goods</p>
+		<img src="{{ asset('index3.jpg') }}">
+		<p>{{ __('Buy eco-friendly goods') }}</p>
 	</div>
 	
 </div>

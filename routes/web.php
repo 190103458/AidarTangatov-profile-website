@@ -17,9 +17,13 @@ use App\Http\Controllers\BlogController;
 |
 */
 
+
+Route::redirect('/', '/en');
+
+Route::group(['prefix'=>'{language}'],function (){
 Route::get('/', function () {
     return view('main');
-});
+})->name('home');;
 
 Route::get('/post', function () {
     $str = post::find(1);
@@ -53,3 +57,4 @@ Route::get('/blog/create', function () {
 Route::post('/blog/create', [BlogController:: class, 'store'])->name('add-post');
 
 Route::get('/post/{id}',[BlogController:: class, 'getPost']);
+});

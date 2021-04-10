@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
 	<div id = "top">
 		<div align="center">
 			<div>
-				<button id="lgn" onclick="popup()">Log In</button>
+				<button id="lgn">{{ __('Log In') }}</button>
 			</div>
 
 				<div class="profile">
@@ -31,7 +31,7 @@
 			    <span class="caret"></span>
 			</button>
 			    <ul class="dropdown-menu" role="menu" style="text-align: center; background-color: #66a3ff;">
-			      <li onmouseover="ov(this)" onmouseout="out(this)"><p class="p1" onclick="logout()">log Out</p></li>
+			      <li onmouseover="ov(this)" onmouseout="out(this)"><p class="p1" onclick="logout()">{{ __('Log Out') }}</p></li>
 			    </ul>
 			  </div>
 			</div>
@@ -39,7 +39,7 @@
 
 
 
-			<img src="font.png" id ="img">
+			<img src="{{ asset('font.png') }}" id ="img">
 		</div>
 
 
@@ -49,18 +49,7 @@
 		<div id="unnav" style="width: 100%">
 			<div class="nav" style="width: 100%">
 			<div class="navbut">
-				<div id="Home" onclick="window.location.reload()" style="width: 100%">Home</div>
-			</div>
-			<div class="navbut">
-				<div id="Products" onclick="change(this)"  style="width: 100%">Products</div>
-			</div>
-			<div class="navbut">
-				<div id="about_us" onclick="change(this)"  style="width: 100%">About us</div>
-			</div>
-			<div class="navbut" >
-				<a href="contact us.html" style="text-decoration: none;width: 100%;display: flex;justify-content: center;">
-					<div id="contacts" onclick="change(this)" style="width: 100%">Contact us</div>
-				</a>
+				<div id="Home" onclick="window.location.reload()" style="width: 100%">{{ __('Home') }}</div>
 			</div>
 		</div>
 		</div>
@@ -71,16 +60,16 @@
 
 	<div class="popup">
 		<div class="content">
-			<img src="font.png" width="20%" style="margin: 20px">
+			<img src="{{ asset('font.png') }}" width="20%" style="margin: 20px">
 			<img onclick="close_popup()" class="x" src="data:image/png;base64,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" width="3%">
-			<input id="username" type="text" name="username" placeholder="Username">
+			<input id="username" type="text" name="username" placeholder="{{ __('Username') }}">
 
 			<div class="password">
-				<input id="pass" type="password" name="pass" placeholder="Password">
+				<input id="pass" type="password" name="pass" placeholder="{{ __('Password') }}">
 				<label><input type="checkbox" class="password-checkbox">  Show password</label>
 			</div>
 
-			<button onclick="login(username.value)" class="btn btn-outline-dark">Log In</button>
+			<button onclick="login(username.value)" class="btn btn-outline-dark">{{ __('Log In') }}</button>
 		</div>
 	</div>
 
@@ -217,13 +206,13 @@
 				
 			<div style="width: 20%">
 				<div class="tool-input">
-					<input type="text" placeholder="Search..." id="Search">
+					<input type="text" placeholder="{{ __('Search...') }}" id="Search">
 				</div>
 				
 			</div>
 			<div style="width: 35%">
 				<div class="tool-input">
-					<input type="text" placeholder="Some text..." id="sometext">
+					<input type="text" placeholder="{{ __('Some text...') }}" id="sometext">
 				</div>
 				
 			</div>
@@ -280,7 +269,7 @@
 	<footer style="margin-top: 100px;background-color: #333;padding: 20px;color: white;letter-spacing: 1.2px;font-size: 18px ">
 		<div>
 			<div style="display: flex;justify-content: center; width: 100%">
-				<p style="letter-spacing: 1.2px">I'm on socnetwork</p>
+				<p style="letter-spacing: 1.2px">{{ __('I am on socnetwork') }}</p>
 			</div>
 			<div>
 				<div style="display: flex;justify-content: center;">
@@ -300,7 +289,7 @@
 			</div>
 
 			<div style="display: flex;justify-content: center;padding: 5px">
-				 <p style="letter-spacing: 1.2px">&copy 2002-2020 &nbsp</p><span style="color: #D685F0">Aidar Tangatov</span>
+				 <p style="letter-spacing: 1.2px">&copy 2002-2020 &nbsp</p><span style="color: #D685F0">{{ __('Aidar Tangatov') }}</span>
 			</div>
 			<div style="display: flex;justify-content: center;">
 				<div><p style="color: #5EA9F6">190103458@stu.sdu.edu.kz,</p></div>
@@ -311,6 +300,6 @@
 		</div>
 	</footer>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="{{ asset('script.js') }}"></script>
 </body>
 </html>

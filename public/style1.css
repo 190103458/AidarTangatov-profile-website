@@ -19,6 +19,21 @@
 
 	border-bottom:5px solid black;
 }
+#langs{
+	width: 40px;
+	border:solid 2px white;
+	background-color: transparent;
+	color: white;
+    height:40px;
+    border-radius: 17px;
+    z-index: 1;
+}
+#langs:hover{
+	width: 44px;
+	height: 44px;
+	border-radius: 20px;
+	font-size: 19px;
+}
 .ic{
 
 	display: inline-block;

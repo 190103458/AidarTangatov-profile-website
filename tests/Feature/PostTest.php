@@ -22,7 +22,7 @@ class PostTest extends TestCase
 
     public function test_post_get_id_request()
     {
-        $response = $this->get('/post/{id}');
+        $response = $this->get('/post/1');
 
         $response->assertStatus(200);
     }

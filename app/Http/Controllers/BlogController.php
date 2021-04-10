@@ -31,7 +31,7 @@ class BlogController extends Controller
 
         if($post == null) return response(['message' => 'post not found'], 404);
 
-        return view('blog.detail') -> with(['blog'=>$post]);
+        return view('blog.detail') -> with(['post'=>$post]);
 
     }
 }
